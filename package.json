@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "prepare": "husky install",
+    "deployweb": "node deployweb.js",  
     "storeassets": "node storeassets.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
