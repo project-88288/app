@@ -143,9 +143,9 @@
             console.log(rowData)
             const row = document.createElement('tr');
             for (const value of Object.values(rowData)) {
-            //  console.log(value)
-              cell = document.createElement('td');
-              row.appendChild(cell)
+              const cell = document.createElement('td');
+            cell.textContent = value;
+            row.appendChild(cell);
             }
             //
             tableBody.appendChild(row);
