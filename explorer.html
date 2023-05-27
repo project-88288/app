@@ -146,11 +146,7 @@
             for (const value of Object.values(rowData)) {
               console.log(value)
               const cell = document.createElement('td');
-              cell.textContent = value['name'];
-              row.appendChild(cell);
-              row.appendChild(cell);
-              row.appendChild(cell);
-              row.appendChild(cell);
+              cell.textContent = value;
             }
   
             tableBody.appendChild(row);
