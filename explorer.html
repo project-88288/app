@@ -143,14 +143,11 @@
             console.log(rowData)
             const row = document.createElement('tr');
             for (const value of Object.values(rowData)) {
-              console.log(value)
+            //  console.log(value)
               cell = document.createElement('td');
-              cell.textContent = value;
-              cell = document.createElement('td');
-              cell.textContent = value;
-              cell = document.createElement('td');
-              cell.textContent = value;
+              row.appendChild(cell)
             }
+            //
             tableBody.appendChild(row);
           }
         });
