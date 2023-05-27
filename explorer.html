@@ -68,6 +68,11 @@
     tr:hover {
       background-color: #f9f9f9;
     }
+
+    img {
+      max-width: 100px;
+      max-height: 100px;
+    }
   </style>
 </head>
 
@@ -139,12 +144,16 @@
           const tableBody = document.getElementById('table-body');
           const _data = Object.values(data['mainnet'])
           // Loop through the data and create table rows
+          // <img src="public/image1.jpg" alt="Image 1">
           for (const rowData of Object.values(_data)) {
             const row = document.createElement('tr');
 
             const cell0 = document.createElement('td');
-            cell0.textContent = rowData[`icon`];
             row.appendChild(cell0);
+
+            var image = document.createElement("img");
+            image.src = rowData[`icon`];
+            cell.appendChild(image);
 
             const cell1 = document.createElement('td');
             cell1.textContent = rowData[`name`];
