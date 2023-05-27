@@ -42,6 +42,32 @@
     main {
       padding: 20px;
     }
+
+
+    h1 {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #f4f4f4;
+    }
+
+    tr:hover {
+      background-color: #f9f9f9;
+    }
+    
   </style>
 </head>
 
@@ -102,6 +128,38 @@
       </p>
     </div>
 
+    <h1>Crypto Explorer</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Symbol</th>
+          <th>Price</th>
+          <th>Market Cap</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Bitcoin</td>
+          <td>BTC</td>
+          <td>$50,000</td>
+          <td>$1 trillion</td>
+        </tr>
+        <tr>
+          <td>Ethereum</td>
+          <td>ETH</td>
+          <td>$3,000</td>
+          <td>$350 billion</td>
+        </tr>
+        <tr>
+          <td>Ripple</td>
+          <td>XRP</td>
+          <td>$0.80</td>
+          <td>$40 billion</td>
+        </tr>
+        <!-- Add more rows for other cryptocurrencies -->
+      </tbody>
+    </table>
     <!-- Content of the page goes here -->
   </main>
 </body>
