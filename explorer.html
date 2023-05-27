@@ -94,37 +94,6 @@
     <table>
       <thead>
         <tr>
-          <th>Name</th>
-          <th>Symbol</th>
-          <th>Price</th>
-          <th>Market Cap</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Bitcoin</td>
-          <td>BTC</td>
-          <td>$50,000</td>
-          <td>$1 trillion</td>
-        </tr>
-        <tr>
-          <td>Ethereum</td>
-          <td>ETH</td>
-          <td>$3,000</td>
-          <td>$350 billion</td>
-        </tr>
-        <tr>
-          <td>Ripple</td>
-          <td>XRP</td>
-          <td>$0.80</td>
-          <td>$40 billion</td>
-        </tr>
-        <!-- Add more rows for other cryptocurrencies -->
-      </tbody>
-    </table>
-    <table>
-      <thead>
-        <tr>
           <th>Icon</th>
           <th>Name</th>
           <th>Symbol</th>
@@ -148,8 +117,8 @@
           for (const rowData of Object.values(_data)) {
             const row = document.createElement('tr');
 
-            const cell0 = document.createElement('td');
-            row.appendChild(cell0);
+           // const cell0 = document.createElement('td');
+           // row.appendChild(cell0);
 
             var image = document.createElement("img");
             image.src = rowData[`icon`];
