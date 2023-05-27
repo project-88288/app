@@ -96,8 +96,8 @@
         <tr>
           <th></th>
           <th></th>
-          <th>Name</th>
           <th>Symbol</th>
+          <th>Name</th>
           <th>Decimals</th>
           <th>Protocol</th>
           <th></th>
@@ -125,13 +125,13 @@
             image.src = rowData[`icon`];
             row.appendChild(image);
 
-            const cell1 = document.createElement('td');
-            cell1.textContent = rowData[`name`];
-            row.appendChild(cell1);
-
             const cell2 = document.createElement('td');
             cell2.textContent = rowData[`symbol`];
             row.appendChild(cell2);
+
+            const cell1 = document.createElement('td');
+            cell1.textContent = rowData[`name`];
+            row.appendChild(cell1);
 
             const cell3 = document.createElement('td');
             cell3.textContent = rowData[`decimals`];
