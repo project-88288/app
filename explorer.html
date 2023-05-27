@@ -6,16 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>OPZ Project Explorer</title>
   <style>
+
     body {
-      background: linear-gradient(to bottom right, rgb(223, 216, 216), #e70909);
+      background: linear-gradient(to bottom right, rgb(223, 216, 216),rgb(230, 85, 85));
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      height: 50vh;
+      height: 100vh;
     }
 
     header {
-      background-color: #0df43f;
+      background-color: rgb(232, 88, 88);
       padding: 8px;
     }
 
@@ -129,7 +130,7 @@
             row.appendChild(cell0);
 
             var image = document.createElement("img");
-            image.src = rowData[`icon`];
+            image.src = `${rowData[`icon`]} alt="Round Image"`;
             row.appendChild(image);
 
             const cell2 = document.createElement('td');
