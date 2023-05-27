@@ -70,8 +70,8 @@
     }
 
     img {
-      max-width: 100px;
-      max-height: 100px;
+      max-width: 40px;
+      max-height: 40px;
     }
   </style>
 </head>
@@ -118,6 +118,8 @@
             const row = document.createElement('tr');
 
             const cell0 = document.createElement('td');
+            row.appendChild(cell0);
+
             var image = document.createElement("img");
             image.src = rowData[`icon`];
             row.appendChild(image);
