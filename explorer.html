@@ -140,14 +140,12 @@
           const _data = Object.values(data['mainnet'])
           // Loop through the data and create table rows
           for (const rowData of Object.values(_data)) {
-            console.log(rowData)
             const row = document.createElement('tr');
             for (const value of Object.values(rowData)) {
               const cell = document.createElement('td');
-            cell.textContent = value;
-            row.appendChild(cell);
+              cell.textContent = value;
+              row.appendChild(cell);
             }
-            //
             tableBody.appendChild(row);
           }
         });
