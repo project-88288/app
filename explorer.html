@@ -117,12 +117,10 @@
           for (const rowData of Object.values(_data)) {
             const row = document.createElement('tr');
 
-           // const cell0 = document.createElement('td');
-           // row.appendChild(cell0);
-
+            const cell0 = document.createElement('td');
             var image = document.createElement("img");
             image.src = rowData[`icon`];
-            cell.appendChild(image);
+            cell0.appendChild(image);
 
             const cell1 = document.createElement('td');
             cell1.textContent = rowData[`name`];
