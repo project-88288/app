@@ -4,6 +4,8 @@
   "description": "Private money info",
   "main": "index.js",
   "scripts": {
+    "prepare": "husky install",
+    "storeassets": "node storeassets.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -12,11 +14,18 @@
   },
   "author": "project-88288",
   "license": "ISC",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  },
   "bugs": {
     "url": "https://github.com/project-88288/app/issues"
   },
   "homepage": "https://github.com/project-88288/app#readme",
   "dependencies": {
-    "glob": "^10.2.6"
+    "glob": "^7.2.0",
+    "husky": "^8.0.1",
+    "lint-staged": ">=10",
+    "@azure/storage-blob": "^12.5.0",
+    "jsdom": "^16.5.0"
   }
 }
