@@ -141,11 +141,15 @@
           // Loop through the data and create table rows
           _data.forEach(rowData => {
             const row = document.createElement('tr');
-            console.log(rowData)
+           // console.log(rowData)
             // Create table cells and populate with data
             for (const value of Object.values(rowData)) {
+              console.log(value)
               const cell = document.createElement('td');
               cell.textContent = value['name'];
+              row.appendChild(cell);
+              row.appendChild(cell);
+              row.appendChild(cell);
               row.appendChild(cell);
             }
   
