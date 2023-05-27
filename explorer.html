@@ -120,12 +120,12 @@
     <table>
       <thead>
         <tr>
-          <th>Column 1</th>
-          <th>Column 2</th>
-          <th>Column 3</th>
-          <th>Column 4</th>
-          <th>Column 5</th>
-          <th>Column 6</th>
+          <th>Icon</th>
+          <th>Name</th>
+          <th>Symbol</th>
+          <th>Decimal</th>
+          <th>Protocal</th>
+          <th>Token</th>
         </tr>
       </thead>
       <tbody id="table-body">
@@ -141,11 +141,31 @@
           // Loop through the data and create table rows
           for (const rowData of Object.values(_data)) {
             const row = document.createElement('tr');
-            for (const value of Object.values(rowData)) {
-              const cell = document.createElement('td');
-              cell.textContent = value;
-              row.appendChild(cell);
-            }
+
+            const cell0 = document.createElement('td');
+            cell0.textContent = rowData[`icon`];
+            row.appendChild(cell0);
+
+            const cell1 = document.createElement('td');
+            cell1.textContent = rowData[`name`];
+            row.appendChild(cell1);
+
+            const cell2 = document.createElement('td');
+            cell2.textContent = rowData[`symbol`];
+            row.appendChild(cell2);
+
+            const cell3 = document.createElement('td');
+            cell3.textContent = rowData[`decimal`];
+            row.appendChild(cell3);
+
+            const cell4 = document.createElement('td');
+            cell4.textContent = rowData[`protocal`];
+            row.appendChild(cell4);
+
+            const cell5 = document.createElement('td');
+            cell5.textContent = rowData[`token`];
+            row.appendChild(cell5);
+
             tableBody.appendChild(row);
           }
         });
