@@ -133,11 +133,11 @@
     </table>
     <script>
       // Fetch data from JSON file
-      fetch('https://opzlife.blob.core.windows.net/assets/data.json')
+      fetch('https://opzlife.blob.core.windows.net/assets/json/ringcw20Assets.json')
         .then(response => response.json())
         .then(data => {
           const tableBody = document.getElementById('table-body');
-          
+          console.log(data)
           // Loop through the data and create table rows
           data.forEach(rowData => {
             const row = document.createElement('tr');
