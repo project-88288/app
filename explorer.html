@@ -137,8 +137,9 @@
         .then(response => response.json())
         .then(data => {
           const tableBody = document.getElementById('table-body');
+          const tabledata = data['mainnet']
           // Loop through the data and create table rows
-          data['mainnet'].forEach(rowData => {
+          tabledata.forEach(rowData => {
             const row = document.createElement('tr');
             console.log(rowData)
             // Create table cells and populate with data
