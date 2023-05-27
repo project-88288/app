@@ -69,24 +69,6 @@
     }
     
   </style>
-    <title>Retrieve JSON from Azure Storage</title>
-  <script>
-    function getJsonFromAzureStorage() {
-      var azureStorageUrl = 'https://opzlife.blob.core.windows.net/assets/data.json';
-
-      fetch(azureStorageUrl)
-        .then(response => response.json())
-        .then(data => {
-          // Process the retrieved JSON data
-          console.log(data);
-          // Do something with the data, such as rendering it on the page
-          document.getElementById('jsonContainer').innerText = JSON.stringify(data, null, 2);
-        })
-        .catch(error => {
-          console.error('Error:', error);
-        });
-    }
-  </script>
 </head>
 
 <body>
@@ -151,7 +133,7 @@
     </table>
     <script>
       // Fetch data from JSON file
-      fetch('data.json')
+      fetch('https://opzlife.blob.core.windows.net/assets/data.json')
         .then(response => response.json())
         .then(data => {
           const tableBody = document.getElementById('table-body');
