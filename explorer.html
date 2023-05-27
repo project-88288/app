@@ -83,51 +83,8 @@
       </ul>
     </nav>
   </header>
+  
   <main>
-    <div class="content-card">
-      <h2>Welcome to Our Website</h2>
-      <h3>Discover the Best of [Your Brand/Company Name]</h3>
-      <img src="path/to/image.jpg" alt="Brand Image">
-      <p>
-        Welcome to our website! We are thrilled to have you here and excited to introduce you to the world of [Your
-        Brand/Company Name]. Whether you're a new visitor or a returning customer, we invite you to explore the vast
-        array of products/services and immerse yourself in the unique experiences we offer.
-      </p>
-      <p>
-        At [Your Brand/Company Name], we are committed to providing exceptional [products/services] that enhance your
-        everyday life. With a deep passion for quality and innovation, we strive to exceed your expectations at every
-        turn. Our team of experts works tirelessly to deliver products/services that combine functionality, style, and
-        affordability.
-      </p>
-      <p>
-        Discover an extensive range of [products/services] designed to cater to your specific needs. From
-        [product/service category] to [product/service category], we have something for everyone. Whether you're looking
-        for [specific product/service] or seeking inspiration for your next purchase, our curated collection is sure to
-        captivate you.
-      </p>
-      <p>
-        We take great pride in the quality of our [products/services]. Each item undergoes rigorous testing and
-        inspection to ensure it meets the highest standards of excellence. Rest assured, when you choose [Your
-        Brand/Company Name], you're investing in superior craftsmanship and durability.
-      </p>
-      <p>
-        Your satisfaction is our top priority. We value your trust and strive to provide exceptional customer service
-        throughout your journey with us. Our dedicated support team is always ready to assist you with any inquiries,
-        concerns, or feedback you may have. We believe in building long-lasting relationships with our customers, and
-        your happiness is our measure of success.
-      </p>
-      <p>
-        Stay up-to-date with the latest news, product launches, and promotions by subscribing to our newsletter. Follow
-        us on social media platforms to join our vibrant community and be part of exciting discussions. We love hearing
-        from our customers and engaging with you at every step.
-      </p>
-      <p>
-        Thank you for visiting our website and considering [Your Brand/Company Name] for your [product/service] needs.
-        We are confident that our offerings will exceed your expectations and leave a lasting impression. Explore our
-        website, connect with us, and let us be your trusted partner in enhancing your [product/service] experience.
-      </p>
-    </div>
-
     <h1>Crypto Explorer</h1>
     <table>
       <thead>
@@ -160,6 +117,42 @@
         <!-- Add more rows for other cryptocurrencies -->
       </tbody>
     </table>
+    <table>
+      <thead>
+        <tr>
+          <th>Column 1</th>
+          <th>Column 2</th>
+          <th>Column 3</th>
+          <th>Column 4</th>
+          <th>Column 5</th>
+          <th>Column 6</th>
+        </tr>
+      </thead>
+      <tbody id="table-body">
+      </tbody>
+    </table>
+    <script>
+      // Fetch data from JSON file
+      fetch('data.json')
+        .then(response => response.json())
+        .then(data => {
+          const tableBody = document.getElementById('table-body');
+          
+          // Loop through the data and create table rows
+          data.forEach(rowData => {
+            const row = document.createElement('tr');
+  
+            // Create table cells and populate with data
+            for (const value of Object.values(rowData)) {
+              const cell = document.createElement('td');
+              cell.textContent = value;
+              row.appendChild(cell);
+            }
+  
+            tableBody.appendChild(row);
+          });
+        });
+    </script>
     <!-- Content of the page goes here -->
   </main>
 </body>
