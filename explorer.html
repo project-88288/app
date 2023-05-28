@@ -6,9 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>OPZ Project Explorer</title>
   <style>
-
     body {
-      background: linear-gradient(to bottom right, rgb(223, 216, 216),rgb(230, 85, 85));
+      background: linear-gradient(to bottom right, rgb(223, 216, 216), rgb(230, 85, 85));
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
@@ -81,7 +80,6 @@
       align-items: center;
       justify-content: center;
     }
-
   </style>
 </head>
 
@@ -157,6 +155,28 @@
             tableBody.appendChild(row);
           }
         });
+
+      function formatNumber(number) {
+        if (number < 1000) {
+          return number.toString();
+        } else if (number < 1000000) {
+          return (number / 1000).toFixed(1) + "k";
+        } else if (number < 1000000000) {
+          return (number / 1000000).toFixed(1) + "m";
+        } else if (number < 1000000000000) {
+          return (number / 1000000000).toFixed(1) + "b";
+        } else {
+          return (number / 1000000000000).toFixed(1) + "t";
+        }
+      }
+
+      // Example usage
+      console.log(formatNumber(1234)); // Output: 1.2k
+      console.log(formatNumber(5000)); // Output: 5.0k
+      console.log(formatNumber(1200000)); // Output: 1.2m
+      console.log(formatNumber(3500000000)); // Output: 3.5b
+      console.log(formatNumber(1234567890123)); // Output: 1.2t
+
     </script>
     <!-- Content of the page goes here -->
   </main>
